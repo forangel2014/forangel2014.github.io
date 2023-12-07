@@ -1,0 +1,19 @@
+name: Auto Deploy
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      # Add your deployment steps here
+      - name: Deploy to server
+        run: |
+          # Your deployment command or script here
+          echo "Deploying..."
